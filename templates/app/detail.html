@@ -1,0 +1,29 @@
+{%  extends "app/base.html"%}
+
+{%block title%}
+index
+{%endblock%}
+
+{%block content%}
+<h1> this is detail page page </h1>
+<h1>list of Pages</h1>
+
+<ul>
+  {% for i in Pages %}
+  <li>{{i}}</li>
+  {%endfor%}
+</ul>
+
+<h1>list of courses</h1>
+
+<ul>
+  {% for i in Courses %}
+
+  <li>{{i}}</li>
+  {%endfor%}
+</ul>
+
+<p>
+<a href="{% url 'ab:index' %}"> <button> go to index page </button></a>
+{%endblock%}
+</p>
